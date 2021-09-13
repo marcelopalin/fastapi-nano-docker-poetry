@@ -38,9 +38,10 @@ poetry run uvicorn app.main:app --reload --host localhost --port 5000
 
 ## Construindo Imagem do Container
 
+Digite este comando na raiz do projeto:
 
 ```s
-docker build --tag fastapi-nano --file docker/Dockerfile . 
+docker build --tag fastapi-nano-palin  . 
 ```
 
 Irá construir a Imagem `fastapi-nano-palin`
