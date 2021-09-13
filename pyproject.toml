@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "fastapi-nano"
+version = "0.1.0"
+description = ""
+authors = ["Marcelo Facio Palin <palinrp@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7.1,<4.0"
+requests = "^2.26.0"
+dynaconf = "^3.1.4"
+pyfiglet = "^0.8.post1"
+loguru = "^0.5.3"
+python-dateutil = "^2.8.2"
+tenacity = "^8.0.1"
+termcolor = "^1.1.0"
+tqdm = "^4.61.2"
+
+fastapi = {extras = ["all"], version = "^0.68.1"}
+SQLAlchemy = "^1.4.23"
+psycopg2-binary = "^2.9.1"
+python-jose = "^3.3.0"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+PyJWT = "^2.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+black = {version = "^21.7b0", allow-prereleases = true}
+flake8 = "^3.9.2"
+pylint = "^2.9.3"
+autoflake = "^1.4"
+isort = "^5.9.2"
+mypy = "^0.910"
+pre-commit = "^2.13.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+# https://github.com/psf/black
+line-length = 88
+target_version = ['py38']
+exclude = '''
+(
+  /(
+    \.git
+    | \.mypy_cache
+    | \.pytest_cache
+    | htmlcov
+    | venv
+    | .venv
+  )/
+)
+'''
+
+[tool.isort]
+# https://github.com/timothycrosley/isort
+# https://github.com/timothycrosley/isort/wiki/isort-Settings
+line_length = 88
+indent = '    '
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
